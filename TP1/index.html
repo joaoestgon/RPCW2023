@@ -1,56 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Hippos Information</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Hipopótamo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>Hippos Information</h1>
-	</header>
+  <header>
+    <h1>Hipopótamo</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Hipopótamo-comum</h2>
+      <p>O hipopótamo-comum (Hippopotamus amphibius) ou hipopótamo-do-nilo é um mamífero herbívoro de grande porte da África subsariana e uma das duas únicas espécies não
+		extintas da família Hippopotamidae, sendo a outra o hipopótamo-pigmeu (Choeropsis liberiensis ou Hexaprotodon liberiensis). O seu nome provém do grego antigo,
+		significando "cavalo do rio" (ἱπποπόταμος). Apesar das suas semelhanças físicas com os porcos e outros ungulados artiodáctilos (sendo por isso designado de animal
+		porcino), os seus parentes vivos mais próximos são os cetáceos (baleias, os golfinhos, etc.) dos quais divergiram há cerca de 55 milhões de anos. O antepassado comum
+		das baleias e dos hipopótamos demarcou-se dos outros artiodáctilos há cerca de 60 milhões de anos. O fóssil mais antigo conhecido de hipopótamo, pertencente ao género
+		Kenyapotamus em África, data de há cerca de 16 milhões de anos. Já foi designado como cavalo-marinho e peixe-cavalo.
 
-	<nav>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About Hippos</a></li>
-			<li><a href="#">Hippos in the Wild</a></li>
-			<li><a href="#">Hippos in Captivity</a></li>
-			<li><a href="#">Contact Us</a></li>
-		</ul>
-	</nav>
-
-	<main>
-		<section class="slideshow-container">
-			<div class="mySlides fade">
-				<img src="img/hippo1.jpg">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/hippo2.jpg">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/hippo3.jpg">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/hippo4.jpg">
-			</div>
-
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		</section>
-
-		<section class="content">
-			<h2>Welcome to Hippos Information</h2>
-			<p>Hippos are amazing creatures that are found in Africa. They are known for their large size and semi-aquatic lifestyle. There are two species of hippos: the common hippo and the pygmy hippo. On this website, you will find information about hippos, their habitat, behavior, and conservation efforts.</p>
-			<p>Explore our website to learn more about these fascinating animals!</p>
-		</section>
-	</main>
-
-	<footer>
-		<p>&copy; 2023 Hippos Information. All rights reserved.</p>
-	</footer>
+		O hipopótamo-comum é reconhecível pelo seu enorme torso em forma de barril, bocas com grande capacidade de abertura revelando grandes presas caninas, corpo quase
+		glabro (sem pelos), patas em forma de coluna e pelo seu grande tamanho. As patas terminam com quatro dedos distintos com membrana interdigital. Cada dedo assenta no
+		solo pelo seu respetivo casco. Constituem o terceiro maior animal de vida terrestre no que diz respeito ao peso (entre 1.5 e 3 toneladas): as únicas espécies em
+		média mais pesadas são os rinocerontes-brancos e os rinocerontes-indianos, bem como os elefantes. Tem um comprimento, em média, de 3,5 m e uma altura de 1,5m.
+		O hipopótamo é um dos maiores quadrúpedes e, apesar do seu aspeto entroncado e patas curtas, consegue facilmente ultrapassar um ser humano. Há registos de velocidades
+		de 30 km/h atingidas por hipopótamos em curtas distâncias. É um animal altamente agressivo e de comportamento imprevisível, sendo considerado um dos animais africanos
+		mais perigosos. Contudo, são uma espécie vulnerável devido à perda dos seus habitats e devido à caça pela sua carne, dentição canina de marfim e pela sua pele.
+		
+		É um animal semiaquático que habita as margens de rios, lagos e pântanos do género dos mangais, podendo mesmo chegar às águas salobras dos estuários, onde um
+		macho dominante preside sobre um troço de rio onde agrupa entre cinco a trinta fêmeas e jovens crias. Durante o dia, mantêm o corpo fresco ficando na água ou na lama;
+		tanto o acasalamento como o parto ocorrem na água. Emergem dela ao anoitecer para se apascentarem na erva. Ainda que se mantenham perto uns dos outros na água, a
+		pastagem é uma atividade solitária, não tendo hábitos territoriais em terra seca. </p>
+    </section>
+    <section>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/hippo1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/hippo2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img src="img/hippo3.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
