@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifesto>
+    <meta>
+        <título>TP1</título>
+        <subtítulo>Hungria</subtítulo>
+        <data>2023-02-17</data>
+        <autor>
+            <nome>João Esteves Gonçalves</nome>
+            <id>PG46535</id>
+            <gitlink>https://github.com/joaoestgon/RPCW2023</gitlink>
+        </autor>
+        <uc>RPCW</uc>
+    </meta>
+    <resumo>
+        <p>Este TPC consiste na criação  de um website HTML sobre um dos temas propostos, neste caso, o <b>Hipopótamo</b>.</p>
+        <p>O website foi formatado com recurso a CSS.</p>
+        <p>As informações presentes no site foram retiradas da <xref url="https://pt.wikipedia.org/wiki/Hipop%C3%B3tamo-comum">Wikipedia</xref>.</p>
+    </resumo>
+    <resultados>
+        <resultado path="link relativo para o ficheiro">Descrição do que é</resultado>
+    </resultados>
+</manifesto>
