@@ -17,7 +17,7 @@ exports.generatePerfil = function(pessoa){
                         <li><strong>Idade:</strong> ${pessoa[0].idade}</li>
                         <li><strong>Sexo:</strong> ${pessoa[0].sexo}</li>
                         <li><strong>Cidade:</strong> ${pessoa[0].morada.cidade} (${pessoa[0].morada.distrito})</li>
-                        <li><strong>CC:</strong> ${pessoa[0].BI} ${pessoa[0].CC}</li>
+                        <li><strong>CC (ou BI):</strong> ${pessoa[0].CC} (${pessoa[0].BI})</li>
                         <li><strong>Profissão:</strong> ${pessoa[0].profissao}</li>
                         <li><strong>Partido Político:</strong> ${pessoa[0].partido_politico.party_name} (${pessoa[0].partido_politico.party_abbr})</li>                        
                         <li><strong>Religião:</strong> ${pessoa[0].religiao}</li>
