@@ -18,14 +18,16 @@ exports.pessoasPage = function(lista){
                 <table class="w3-table-all">
                     <tr>
                         <th>Id</th><th>Nome</th><th>Idade</th><th>Sexo</th><th>Cidade</th>
-                    </tr>
+                    </tr >
                     `
                     // let significa que a variável i só existe dentro do ciclo
                     for(let i = 0; i < lista.length; i++){
                         pagHTML += `
+                        <a href="http://localhost:7777/perfil?id=${lista[i].id}">
                             <tr>
-                                <td>${lista[i].id}</td><td>${lista[i].nome}</td><td>${lista[i].idade}</td><td>${lista[i].sexo}</td><td>${lista[i].morada.cidade}</td>
+                                <td>${lista[i].id}</td><td><a href="http://localhost:7777/perfil?id=${lista[i].id}">${lista[i].nome}</a></td><td>${lista[i].idade}</td><td>${lista[i].sexo}</td><td>${lista[i].morada.cidade}</td>
                             </tr>
+                        </a>
                         `
                     }
 

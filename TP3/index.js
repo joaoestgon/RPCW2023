@@ -15,9 +15,24 @@ http.createServer(function(req, res){
     console.log(req.method + " " + req.url + " " + d)
 
     var dicURL = url.parse(req.url, true)
+    console.log(dicURL)
 
     if(dicURL.pathname == "/"){
-        axios.get("http://localhost:3000/pessoas?id=p1")
+        axios.get('http://localhost:3000/pessoas')
+            .then(function(resp){
+                var pessoas = resp.data
+                res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+                //res.end(pessoasPage(pessoas))
+                res.end(pessoasPage(pessoas))
+            })
+            // Sintaxe de usada para a função no Catch é mais "moderno"
+            .catch(erro => {
+                console.log("Erro no Axios: " + erro)
+                res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+                res.end("ERRO: " + erro)
+            })
+    }else if(dicURL.pathname == "/perfil"){
+        axios.get("http://localhost:3000/pessoas" + dicURL.search)
             .then(function(resp){
                 var pessoas = resp.data
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
