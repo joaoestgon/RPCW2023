@@ -45,10 +45,13 @@ http.createServer(function(req, res){
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
                 res.end("ERRO: " + erro)
             })
-    }else if(dicURL.pathname == "/ordenada"){
-        axios.get("http://localhost:3000/pessoas?_sort=nome&_order=asc")
+    }else if(dicURL.pathname == "/top10profissoes"){
+        axios.get("http://localhost:3000/pessoas")
             .then(function(resp){
                 var pessoas = resp.data
+
+                
+
                 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
                 res.end(pessoasPage(pessoas))
             })
