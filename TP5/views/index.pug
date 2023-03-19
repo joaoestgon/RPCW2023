@@ -1,5 +1,62 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+    head
+        title ToDo List
+        meta(charset="utf-8")
+        link(rel="icon", href="favicon.png")
+        link(rel="stylesheet", href="w3.css")
+    body
+        div.w3-bottombar.w3-padding-16
+            if JSON.stringify(tarefa) !== '{}'
+                form.w3-container(action=`/tarefas/${tarefa.id}`, method="POST")
+            else
+                form.w3-container(action="/tarefas", method="POST")
+            div.w3-row-padding
+                if JSON.stringify(tarefa) !== '{}'
+                    div.w3-third
+                        label.w3-text-indigo(for="deadline") Data limite
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="date", placeholder=tarefa.deadline, onfocus="(this.type='date')", onblur="(this.type='text')", name="deadline")
+                    div.w3-third
+                        label.w3-text-indigo(for="author") Autor
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="text", placeholder=tarefa.author, name="author")
+                    div.w3-third
+                        label.w3-text-indigo(for="desc") Descrição
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="text", placeholder=tarefa.desc, name="desc")
+                else
+                    div.w3-third
+                        label.w3-text-indigo(for="deadline") Data limite
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="date", name="deadline", required)
+                    div.w3-third
+                        label.w3-text-indigo(for="author") Autor
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="text", name="author", required)
+                    div.w3-third
+                        label.w3-text-indigo(for="desc") Descrição
+                        input.w3-input.w3-border.w3-round.w3-light-grey(type="text", name="desc", required)
+            div.w3-center.w3-margin-top
+                input.w3-btn.w3-round-large.w3-indigo(type="submit", value="Registar")
+                input.w3-btn.w3-round-large.w3-teal(type="reset", value="Limpar")
+            form
+        div.w3-row
+            div.w3-col.s6
+                h2.w3-text-indigo.w3-center Tarefas por Realizar
+                if naoRealizadas.length === 0
+                    p.w3-center Não há tarefas para mostrar.
+                each nr in naoRealizadas
+each nr in naoRealizadas
+          .w3-container
+            ul.w3-ul.w3-border
+              li #{nr.author} | #{nr.desc} | Data limite: #{nr.deadline}
+                a.w3-btn.w3-blue.w3-round-large.w3-padding-small(href="http://localhost:7777/tarefas/#{nr.id}/editar") Editar
+                a.w3-btn.w3-green.w3-round-large.w3-padding-small(href="http://localhost:7777/tarefas/#{nr.id}/feito") Feito
+                a.w3-btn.w3-red.w3-round-large.w3-padding-small(href="http://localhost:7777/tarefas/#{nr.id}/eliminar") Eliminar
+      .w3-col.s6
+        h2.w3-text-indigo.w3-center Tarefas Realizadas
+        if realizadas.length === 0
+          p.w3-center Adicione uma Tarefa.
+        each r in realizadas
+          .w3-container
+            ul.w3-ul.w3-border
+              li #{r.author} | #{r.desc}
+                a.w3-btn.w3-red.w3-round-large.w3-padding-small(href="http://localhost:7777/tarefas/#{r.id}/eliminar") Eliminar

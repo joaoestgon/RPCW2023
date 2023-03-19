@@ -265,7 +265,7 @@ var tarefasServer = http.createServer(function (req, res) {
                     recuperaInfo(req, resultado => {
                         dataCriacao = formatDate(d)
                         console.log('POST de uma tarefa: ' + JSON.stringify(resultado))
-                        resultado["done"] = false
+                        resultado["done"] = "false"
                         axios.post('http://localhost:3000/tarefas', resultado)
                         .then(resp => {
                             res.writeHead(303, {'Location': '/'})

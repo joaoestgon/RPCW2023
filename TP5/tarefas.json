@@ -1,0 +1,18 @@
+{
+  "tarefas": [
+    {
+      "id": 1,
+      "deadline": "2023-03-12",
+      "author": "anibal",
+      "desc": "comer rojoes",
+      "done": "true"
+    },
+    {
+      "id": 1,
+      "deadline": "2023-03-12",
+      "author": "esdrubal",
+      "desc": "comprar porta chaves",
+      "done": "false"
+    }
+  ]
+}
