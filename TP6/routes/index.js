@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   var data = new Date().toISOString().substring(0, 16)
   Pessoa.list()
     .then(pessoas => {
-      res.render('index', { pessoas_list: pessoas, d: data });
+      res.render('index', { plist: pessoas, d: data });
     })
     .catch(erro => {
       res.render('error', {error: erro, message: "Erro na obtenção da lista de pessoas"})
